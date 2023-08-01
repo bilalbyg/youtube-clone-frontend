@@ -35,6 +35,6 @@ export const SidebarItems= {
         { icon: <BsNewspaper size={21} />, name: "News" },
         { icon: <CiTrophy size={23} />, name: "Sports" },
         { icon: <AiOutlineBulb size={21} />, name: "Learning" },
-        { icon: <GiDress size={21} />, name: "Fasion & beauty" },
+        { icon: <GiDress size={21} />, name: "Fashion & Beauty" },
     ]
 }
