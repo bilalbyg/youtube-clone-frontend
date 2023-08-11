@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  
+body {
+  @apply bg-yt-black;
+}
+
+.wrapper {
+  height: calc(100% - theme("spacing.24"));
+}
+

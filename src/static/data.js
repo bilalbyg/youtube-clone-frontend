@@ -13,7 +13,7 @@ import { CiTrophy } from "react-icons/ci";
 import { GiDress } from "react-icons/gi";
 import { HiSignal } from "react-icons/hi2";
 
-export const SidebarItems= {
+export const SideBarItems= {
     Top : [
         { icon: <AiFillHome size={21} />, name: "Home" },
         { icon: <SiYoutubemusic size={21} />, name: "Shorts" },
@@ -38,3 +38,18 @@ export const SidebarItems= {
         { icon: <GiDress size={21} />, name: "Fashion & Beauty" },
     ]
 }
+
+export const CategoryItems = [
+    "All",
+    "Music",
+    "Mixes",
+    "Silicon Valley",
+    "T-Series",
+    "Kollywood",
+    "Tollywood",
+    "Hollywood",
+    "Sitcom",
+    "Cricket",
+    "Tech",
+    "Gaming",
+  ];
