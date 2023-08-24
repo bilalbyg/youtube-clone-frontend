@@ -1,42 +1,52 @@
-import { AiFillHome } from "react-icons/ai";
-import { MdOutlineSubscriptions } from "react-icons/md";
-import { SiYoutubemusic, SiYoutubegaming } from "react-icons/si";
-import { MdVideoLibrary, MdOutlineLocalMovies } from "react-icons/md";
-import { VscHistory } from "react-icons/vsc";
-import { AiOutlinePlaySquare } from "react-icons/ai";
-import { AiOutlineClockCircle, AiOutlineBulb } from "react-icons/ai";
-import { BiLike } from "react-icons/bi";
-import { BsNewspaper } from "react-icons/bs";
-import { HiOutlineFire } from "react-icons/hi";
-import { IoMusicalNoteOutline } from "react-icons/io5";
-import { CiTrophy } from "react-icons/ci";
-import { GiDress } from "react-icons/gi";
-import { HiSignal } from "react-icons/hi2";
+import { Icon } from "./Icons";
 
 export const SideBarItems= {
     Top : [
-        { icon: <AiFillHome size={21} />, name: "Home" },
-        { icon: <SiYoutubemusic size={21} />, name: "Shorts" },
-        { icon: <MdOutlineSubscriptions size={21} />, name: "Subscriptions" },
+        { icon: <Icon name="home" />, name: "Home" },
+        { icon: <Icon name="shorts" />, name: "Shorts" },
+        { icon: <Icon name="subscriptions"/>, name: "Subscriptions" },
     ],
     Middle : [
-        { icon: <MdVideoLibrary size={21} />, name: "Library" },
-        { icon: <VscHistory size={21} />, name: "History" },
-        { icon: <AiOutlinePlaySquare size={21} />, name: "Your videos" },
-        { icon: <AiOutlineClockCircle size={21} />, name: "Watch later" },
-        { icon: <BiLike size={21} />, name: "Liked videos" },
+        { icon: <Icon name="library" />, name: "Library" },
+        { icon: <Icon name="history" />, name: "History" },
+        { icon: <Icon name="yourVideos" />, name: "Your videos" },
+        { icon: <Icon name="watchLater" />, name: "Watch later" },
+        { icon: <Icon name="likedVideos" />, name: "Liked videos" },
     ],
+    Expand : [
+        { icon: <Icon name="playlist" />, name: "Playlist Name"}
+    ],    
+    
+    Subscriptions : [
+        { icon: <img className="w-6 h-6 rounded-full object-cover" src="https://images.pexels.com/photos/2955819/pexels-photo-2955819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="channel" />, name: "Delicious Food Advices"},
+        { icon: <img className="w-6 h-6 rounded-full object-cover" src="https://images.pexels.com/photos/544113/pexels-photo-544113.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="channel" />, name: "Chill Coffee Shop"},
+        { icon: <img className="w-6 h-6 rounded-full object-cover" src="https://images.pexels.com/photos/15139464/pexels-photo-15139464/free-photo-of-siyah-ve-beyaz-bagbozumu-is-para.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="channel" />, name: "Daily News"},
+    ],
+
     Explore : [
-        { icon: <HiOutlineFire size={21} />, name: "Trending" },
-        { icon: <IoMusicalNoteOutline size={21} />, name: "Music" },
-        { icon: <MdOutlineLocalMovies size={21} />, name: "Movies" },
-        { icon: <HiSignal size={21} />, name: "Live" },
-        { icon: <SiYoutubegaming size={21} />, name: "Gaming" },
-        { icon: <BsNewspaper size={21} />, name: "News" },
-        { icon: <CiTrophy size={23} />, name: "Sports" },
-        { icon: <AiOutlineBulb size={21} />, name: "Learning" },
-        { icon: <GiDress size={21} />, name: "Fashion & Beauty" },
-    ]
+        { icon: <Icon name="trending" />, name: "Trending" },
+        { icon: <Icon name="music" />, name: "Music" },
+        { icon: <Icon name="live" />, name: "Live" },
+        { icon: <Icon name="gaming" />, name: "Gaming" },
+        { icon: <Icon name="sports" />, name: "Sports" },
+    ],    
+    
+    MoreFromYoutube : [
+        { icon: <Icon name="premium" />, name: "Youtube Premium" },
+        { icon: <Icon name="studio" />, name: "Youtube Studio" },
+        { icon: <Icon name="ytmusic" />, name: "Youtube Music" },
+        { icon: <Icon name="kids" />, name: "Youtube Kids" },
+
+    ],    
+    
+    YoutubeMenu : [
+        { icon: <Icon name="settings" />, name: "Settings" },
+        { icon: <Icon name="report" />, name: "Report history" },
+        { icon: <Icon name="help" />, name: "Help" },
+        { icon: <Icon name="feedback" />, name: "Send feedback" },
+
+    ],
+
 }
 
 export const CategoryItems = [

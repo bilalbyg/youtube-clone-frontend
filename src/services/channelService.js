@@ -10,11 +10,15 @@ export default class ChannelService {
     return this.instance;
   }
 
-  getChannels(){
+  getChannels() {
     return axios.get("http://localhost:5000/channels");
-  }  
-  
-  getChannelById(id){
+  }
+
+  getChannelById(id) {
     return axios.get(`http://localhost:5000/channels/${id}`);
+  }
+
+  getChannelsByIDs(ids) {
+    return axios.post("http://localhost:5000/channels/ids", {ids});
   }
 }

@@ -8,30 +8,8 @@ const Video = ({videoData}) => {
   const [video, setVideo] = useState([])
   const [channel, setChannel] = useState([])
 
-  // const timeSinceUpload = () => {
-  //   let uploadDate = videoData.upload_date.split("T")[0]
-  //   const diffInMs = new Date() - new Date(uploadDate)
-  //   const diffInDays = parseInt(diffInMs / (1000 * 60 * 60 * 24));
-    
-  //   let returnedValue = "";
-
-  //   if(diffInDays >= 365){
-  //     returnedValue = parseInt(diffInDays / 365) + " years ago"
-  //   }
-  //   else if(diffInDays >= 30){
-  //     returnedValue = parseInt(diffInDays / 30) + " months ago"
-  //   }else if(diffInDays >= 7){
-  //     returnedValue = parseInt(diffInDays / 7) + " weeks ago"
-  //   }else if(diffInDays >= 1){
-  //     returnedValue = diffInDays + " days ago"
-  //   }else{
-  //     returnedValue = "a few hours ago"        
-  //   }
-  //   return returnedValue + "/" + diffInDays
-  // }
-
   useEffect(()=> {
-
+    
     setVideo(videoData)
 
     let channelService = ChannelService.getInstance()
@@ -42,12 +20,12 @@ const Video = ({videoData}) => {
   }, [])
 
   return (
-    <div className="flex flex-col max-w-[260px] cursor-pointer">
+    <div className="flex flex-col max-w-[440px] md:max-w-[270px] cursor-pointer">
       <div className="w-full relative">
         <img
           src={`${video?.thumbnail}`}
           alt=""
-          className="h-[146px] w-[260px] overflow-hidden rounded-2xl object-cover"
+          className="h-full w-full md:h-[150px] md:w-[270px] overflow-hidden rounded-2xl object-cover"
         />
         <p className="absolute right-2 top-[85%] px-1 text-xs bg-yt-black text-yt-white rounded">
           {video?.duration}

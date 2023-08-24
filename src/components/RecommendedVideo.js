@@ -1,26 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MdVerified } from "react-icons/md";
+import ChannelService from "../services/channelService";
+import { timeSinceUpload } from "../scripts/utils/timeSinceUpload";
 
-const RecommendedVideo = ({ thumbnail, title, channel, views, uploadTime }) => {
+const RecommendedVideo = ({ video }) => {
+  const [channel, setChannel] = useState([]);
+
+  useEffect(() => {
+    if (video) {
+      let channelService = ChannelService.getInstance();
+      channelService.getChannelById(video.channel_id).then((res) => {
+        setChannel(res.data);
+      });
+    }
+  }, []);
+
   return (
     <div className="text-yt-white flex cursor-pointer mb-4">
       <img
-        src="https://i.ytimg.com/vi/qEVUtrk8_B4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDVJ5Y-F1UAd3aXRfhO2XpIMeMiag"
-        className="h-24 w-34 rounded-xl object-contain"
+        src={video?.thumbnail}
+        className="h-[96px] w-[144px] rounded-xl object-cover"
       />
       <div className="pl-2">
-        <h2 className="text-sm font-medium">
-          John Wick : Chapter 4 / Keanu Reeves
-        </h2>
+        <h2 className="text-sm font-medium">{video?.name}</h2>
         <p className="text-xs text-yt-gray pt-2 flex items-center">
-          Movie Trailers
+          {channel.name}
           <span className="pl-1">
             <MdVerified />
           </span>
         </p>
         <div className="flex">
-            <p className="text-xs text-yt-gray pr-1">10M views</p>
-            <p className="text-xs text-yt-gray pr-1">5 days ago</p>
+          <p className="text-xs text-yt-gray pr-1">{video?.views} views</p>
+          <p className="text-xs text-yt-gray pr-1">{timeSinceUpload(video?.upload_date)}</p>
         </div>
       </div>
     </div>

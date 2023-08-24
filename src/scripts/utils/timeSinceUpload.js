@@ -17,7 +17,7 @@ const timeSinceUpload = (date) => {
       }else{
         returnedValue = "a few hours ago"        
       }
-      return returnedValue + "/" + diffInDays
+      return returnedValue
 }
 
 module.exports = {

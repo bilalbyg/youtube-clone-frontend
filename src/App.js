@@ -7,6 +7,7 @@ import "./App.css";
 import Deneme from "./pages/Deneme";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
+import Channel from "./pages/Channel";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/deneme" element={<Deneme />} />
+          <Route path="/channel/:id" element={<Channel />} />
           <Route path="/video/:id" element={<Video />} />
           <Route path="/signup" element={<Signup />}/>
           <Route path="/signin" element={<Signin />}/>
