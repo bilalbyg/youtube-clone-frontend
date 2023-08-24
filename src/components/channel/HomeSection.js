@@ -2,6 +2,8 @@ import React from "react";
 import FeaturedVideo from "./FeaturedVideo";
 import Divider from "../Divider";
 import ChannelVideoSection from "./ChannelVideoSection";
+import ScrollContainer from "react-indiana-drag-scroll";
+import { NavLink } from "react-router-dom";
 
 const HomeSection = () => {
   return (

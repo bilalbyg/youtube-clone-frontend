@@ -13,7 +13,6 @@ module.exports = {
         "yt-light-black": "#272727",
         "yt-light": "#181818",
         "yt-light-1": "#212121",
-        "yt-gray": "gray",
       },
     },
   },

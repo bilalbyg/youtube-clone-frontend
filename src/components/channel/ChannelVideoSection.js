@@ -20,6 +20,7 @@ const ChannelVideoSection = ({title}) => {
       </ScrollContainer>
       <Divider />
     </>
+
   );
 };
 

@@ -40,7 +40,7 @@ const Channel = () => {
       <div className="hidden xl:flex w-60 min-w-[240px] h-96">
         <Sidebar />
       </div>
-      <div className="flex flex-col w-full h-full text-white pt-14 pl-4 ">
+      <div className="flex flex-col w-full h-full text-white pt-14 pl-4 max-w-7xl">
         <div className="relative w-full h-full">
           <img
             src={channel.background_image}
@@ -80,7 +80,7 @@ const Channel = () => {
             <button className="w-24 h-9 bg-[#f1f1f1] text-[#0f0f0f] text-sm font-semibold rounded-3xl">
               Subscribe
             </button>
-            <button className="hidden md:flex w-16 h-9 bg-transparent text-[#f1f1f1] text-sm font-semibold rounded-3xl border border-[#f1f1f1]">
+            <button className="flex items-center justify-center hidden md:flex w-16 h-9 bg-transparent text-[#f1f1f1] text-sm font-semibold rounded-3xl border border-[#f1f1f1]">
               Join
             </button>
           </div>
